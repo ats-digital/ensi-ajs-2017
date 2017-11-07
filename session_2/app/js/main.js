@@ -10,7 +10,7 @@ app.config(function ($routeProvider) {
 
 	$routeProvider.when("/details", {
 		templateUrl: "details.html",
-		controller: "SingleProductCtrl"
+		controller: "ProductsCtrl"
 	})
 
 	$routeProvider.otherwise({ redirectTo: '/' })
