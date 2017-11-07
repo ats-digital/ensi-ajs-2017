@@ -1,4 +1,21 @@
-var app = angular.module('ShopApp', []);
+var app = angular.module('ShopApp', ['ngRoute']);
+
+
+app.config(function ($routeProvider) {
+
+	$routeProvider.when("/", {
+		templateUrl : "global.html",
+		controller: "ProductsCtrl"
+	})
+
+	$routeProvider.when("/details", {
+		templateUrl: "details.html",
+		controller: "SingleProductCtrl"
+	})
+
+	$routeProvider.otherwise({ redirectTo: '/' })
+	
+})
 
 app.controller('ProductsCtrl', [
 	'$scope',
