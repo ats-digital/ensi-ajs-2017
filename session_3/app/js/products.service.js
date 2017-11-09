@@ -37,7 +37,7 @@ app.service('ProductsService', ['$http', function($http) {
 			return;
 		}
 
-		$http.get('http://10.128.4.228:3001/products').then(function(response) {
+		$http.get('http://localhost:3001/products').then(function(response) {
 
 			if (response.data && response.data.products) {
 				self.products = response.data.products.map(function(product) {
